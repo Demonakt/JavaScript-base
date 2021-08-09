@@ -1,5 +1,7 @@
+'use strict';
+
   //ЗАДАНИЕ №1;
-/*
+
 //пример 1
 let a = 1, b = 1, c, d;
 c = ++a;
@@ -38,14 +40,44 @@ if( a > 0 && b > 0 ){
     alert( a + b );
 }
 
- */
+
 
    //ЗАДАНИЕ №4;
 
-function num( a, b){
-    let num1 = a;
-    let num2 = b;
-    return alert( num1 + num2 );
-}
+function numAddition(a, b) {
+    return console.log(a + b);
+} function numDifference( a, b ) {
+    return console.log(a - b);
+} function numMultiplication( a, b ) {
+    return console.log(a * b);
+  } function numDivision( a, b ) {
+    return console.log(a / b);
+  }
 
-num( 10, 23 )
+
+  //ЗАДАНИЕ №5;
+  let arg1 = +prompt("enter number");
+  let arg2 = +prompt("enter number")
+  let operation = prompt("enter operator")
+  let mathOperation = (arg1, arg2, operation) => {
+    switch (operation){
+        case "+":
+            numAddition(arg1, arg2);
+            break;
+        case '-':
+            numDifference(arg1, arg2);
+            break;
+        case '*':
+            numMultiplication(arg1, arg2);
+            break;
+        case '/':
+            numDivision(arg1, arg2);
+            break;
+    }
+
+  }
+
+mathOperation(arg1, arg2, operation);
+
+
+
