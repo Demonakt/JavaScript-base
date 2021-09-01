@@ -9,11 +9,46 @@
 <!--    <script async src="lesson2.js"></script>-->
 <!--    <script async src="lesson3.js"></script>-->
 <!--    <script async src="lesson4.js"></script>-->
-    <script async src="lesson5.js"></script>
-    <link rel="stylesheet" href="scss/style.css">
+<!--    <script async src="lesson5.js"></script>-->
+    <script async src="lesson6.js"></script>
+<!--    <link rel="stylesheet" href="scss/style.css">-->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1e88dc12be.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+<div class="container">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+
+<!-- Задание. Надо сделать, чтобы по клику на крестик исчезало тот блок
+с сообщением, в котором этот крестик находится. Для этого:
+1. Получите все кнопки, например с помощью querySelectorAll
+2. Переберите полученную коллекцию, например с помощью forEach
+2.1 Методу forEach передавайте callback-функцию с параметром button
+3. Каждому button назначьте обработчик клика, с помощью addEventListener,
+а самим обработчиком клика будет функция closeClickHandler (в коде ниже)
+4. В функции closeClickHandler из объекта события event обратитесь
+к currentTarget, затем обратитесь к родительскому узлу, затем к свойству
+style, наконец сделайте display: none
+-->
 
 
 </body>
