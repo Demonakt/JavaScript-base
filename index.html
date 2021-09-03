@@ -17,38 +17,29 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-</div>
+<form>
+    <input id="first" type="text"><br>
+    <br>
+    <input id="second" type="text"><br>
+    <br>
+    <button>Отправить</button>
+</form>
 
-<!-- Задание. Надо сделать, чтобы по клику на крестик исчезало тот блок
-с сообщением, в котором этот крестик находится. Для этого:
-1. Получите все кнопки, например с помощью querySelectorAll
-2. Переберите полученную коллекцию, например с помощью forEach
-2.1 Методу forEach передавайте callback-функцию с параметром button
-3. Каждому button назначьте обработчик клика, с помощью addEventListener,
-а самим обработчиком клика будет функция closeClickHandler (в коде ниже)
-4. В функции closeClickHandler из объекта события event обратитесь
-к currentTarget, затем обратитесь к родительскому узлу, затем к свойству
-style, наконец сделайте display: none
--->
+<!--
+    Задание. Вам нужно проверять пусто ли в input'ах при отправке формы.
+    Если в инпуте пусто делаете ему красную рамку. Если хотя бы в одном
+    инпуте пусто форма не должна отправляться.
+    1. сохраните в переменную formEl ссылку на форму
+    2. сохраните в переменную ссылку на input#first
+    3. сохраните в переменную ссылку на input#second
+    4. на formEl назначьте обработку события отправки формы (submit),
+    у функции-обработчика объявите параметр event.
+        4.1 в функции-обработчике вы проверяете пусты ли input'ы, для этого
+        читайте у них свойство value
+        4.2 если input пустой тогда вы обращаетесь к его style.borderColor
+        и делаете его равным red
+        4.3 чтобы остановить отправку формы используйте event.preventDefault()
+ -->
 
 
 </body>

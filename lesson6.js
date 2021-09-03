@@ -89,12 +89,44 @@
 
 // 3-1
 
+// let btn = document.querySelectorAll('.alert');
+// btn[0].addEventListener('click', function() {
+//     btn[0].style='display:none'
+// })
+// btn[1].addEventListener('click', function() {
+//     btn[1].style='display:none'
+// })
+// btn[2].addEventListener('click', function() {
+//     btn[2].style='display:none'
+// })
 
+/////////////////////////////////////////////////////
 
+// let btn = document.querySelectorAll('button')
+// btn.forEach(function (elem, i, btn) {
+//     elem.addEventListener('click', function (event) {
+//         event.Target = elem.parentNode.style='display:none'
+//     })
+// });
+// function buttonClickHandler(event) {
+//
+// }
 
+// 3-2
 
+// let btn = document.querySelectorAll('button')
+// btn.forEach(function (elem, i, btn) {
+//     elem.addEventListener('click', function  buttonClickHandler(event){
+//     event.target = elem.parentNode.style='background:lightgreen' ;
+//     })
+//     elem.addEventListener('click', function  buttonClickHandler(event){
+//         event.target = elem.innerText='Добавлено';
+//     })
+// })
 
+// 3-3
 
-
-
+let first = document.getElementById('first')
+let second = document.getElementById('second')
+let formEl = document.querySelector('button')
 
