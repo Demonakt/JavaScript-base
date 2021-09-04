@@ -126,7 +126,39 @@
 
 // 3-3
 
-let first = document.getElementById('first')
-let second = document.getElementById('second')
-let formEl = document.querySelector('button')
+// let first = document.getElementById('first')
+// let second = document.getElementById('second')
+// let formEl = document.querySelector('button')
+// let nothing = '';
+//
+// formEl.addEventListener('click', function(event){
+//     if (first.value == nothing || null){
+//         first.style.borderColor='red';
+//         event.preventDefault();
+//     }
+//     if (second.value == nothing || null){
+//         second.style.borderColor='red';
+//         event.preventDefault();
+//     }
+// })
+
+// 3-4
+
+// let goToTopEl = document.getElementById('goToTop')
+// window.addEventListener('scroll', function(event){
+//     if(window.pageYOffset < 500){
+//         goToTopEl.style='display:none';
+//     }else{
+//         goToTopEl.style='display:string';
+//     }
+// })
+
+// 3-5
+
+    // setTimeout(function () {
+    //     let img = document.querySelectorAll('img')
+    //     for( let i = 0; i < img.length; i++){
+    // img[i].setAttribute('src',`images/${i+1}.jpg`)
+    //     }
+    // }, 3000);
 
