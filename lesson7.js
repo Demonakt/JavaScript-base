@@ -56,42 +56,36 @@
 
 // 3-2
 
+// let btn = document.querySelector('button')
+// let msg = document.querySelector('.message')
+// let notification = new Audio('notification.mp3')
+//
+// btn.addEventListener('click', function (event) {
+// let msgHeight = msg.clientHeight;
+// msg.style.transform = `translateY(-${40 + msgHeight}px)`;
+// notification.play();
+// })
 
+// 4-1
 
+// 1-вывод товаров.html / app.js
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 4-2
+//
+// let div = document.querySelector('div');
+//
+// /**
+//  * @param {number} percent величина процента от 0 до 100.
+//  */
+// function changeProgress(percent) {
+//     div.style.background = `linear-gradient(90deg, rgba(38,255,162,1) ${percent}%, rgba(255,255,255,1) ${percent}%)`;
+//
+// }
+// for( let i =0; i <= 100; i++){
+//     setTimeout(function () {
+//         changeProgress(i);
+//     },i * 200)
+// }
 
 
 
