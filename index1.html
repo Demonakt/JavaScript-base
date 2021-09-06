@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lesson7.js">
+</head>
+<body>
+
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+
+    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+</div>
+
+<!--
+Задание. Нужно сделать, чтобы при кликах по .nav-link:
+1. Класс active назначался тому .nav-link, по которому кликнули, а у предыдущего
+.nav-link, чтобы этот класс убирался.
+2. В зависимости от того по какому .nav-link кликнули нужно чтобы менялся текст
+в .text, соответствующие тексты вы найдете в app.js
+-->
+
+<script>
+    'use strict';
+    const texts = {
+        text1: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        text2: 'Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.',
+        text3: 'Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил.'
+    };
+
+    let text = document.querySelector('.text')
+    let navLink = document.querySelectorAll('.nav-link')
+    navLink.forEach(function (elem, i, navLink) {
+        elem.addEventListener('click', clickHandler)
+    })
+    /*
+    1. Получите ссылку на .text, например с помощью querySelector
+    2. Получите коллекцию, в которой хранятся все .nav-link, например с помощью querySelectorAll
+        2.1 Переберите полученную коллекцию, например с помощью forEach, и каждой ссылке назначьте
+        обработчик клика функцию clickHandler.
+    */
+
+
+    /**
+     * Обработчик клика по .nav-link
+     * @param {MouseEvent} event
+     */
+    function clickHandler(event) {
+        // здесь вызывайте changeText и changeActiveClass, и передавайте
+        // им объект события.
+        changeText(event)
+        changeActiveClass(event)
+    }
+
+    /**
+     * Эта функция должна убирать .active у предыдущего .nav-link и ставить его
+     * на тот, по которому кликнули.
+     * @param {MouseEvent} event
+     */
+    function changeActiveClass(event) {
+        document.querySelector('.active').classList.remove('active')
+        event.target.classList.add('active')
+    }
+
+    /**
+     * Эта фукнция должна читать текст (например через textContent) из
+     * .nav-link по которому кликнули и в зависимости от этого в .text
+     * ставить соответствующий текст из texts.
+     * @param {MouseEvent} event
+     */
+    function changeText(event) {
+        // console.log(event.target.textContent)
+        // event.target.textContent
+        switch (event.target.textContent) {
+        case "Link 1":
+            text.innerText = texts['text1']
+                break;
+        case 'Link 2':
+                text.innerText = texts['text2']
+                break;
+        case 'Link 3':
+                text.innerText = texts['text3']
+                break;
+        }
+
+    }
+</script>
+
+
+</body>
+</html>
